@@ -1,0 +1,68 @@
+[
+    {
+        "id": "001",
+        "image": "https://i.ibb.co/Km3M9MH/9.jpg",
+        "title": "Paradise Of Kashmir 4N/5D",
+        "description": "Enjoy a mountain escape with incredible packages!",
+        "location": "Kashmir, India",
+        "duration": "5 Days 4 Nights",
+        "price": "5D/4N, BDT 13,840/person",
+        "included": "Hotel, Breakfast, Buffet, Tours, Airport transfers",
+        "detail": "Day 01: (Srinagar) Arrival in Srinagar | Half Day Sightseeing Day 02: (Srinagar) Day excursion to Gulmarg Day 03: (Srinagar) Day excursion to Pahalgam Day 04: (Srinagar) Day excursion to Sonmarg Day 05: (Srinagar) Departure"
+    },
+    {
+        "id": "002",
+        "image": "https://i.ibb.co/wyrbB83/2.jpg",
+        "title": "Sajek Valley: Kingdom of Clouds",
+        "description": "Queen of Hills & Roof of Rangamati (Specialized Group Tour)",
+        "location": "KhagraChari",
+        "duration": "3Nights 2 Days",
+        "price": "BDT 4840/person",
+        "included": "Hotel, Breakfast,Tours, Airport transfers",
+        "detail": "Night 01: Journey starts for Khagrachari  Day 1: Valley of Clouds  The trip will start from Dhaka.  Nights 2: The night will be spent at the resort. Day 2: Alutila Cave & Risang Waterfall. Start towards Dhaka. Night 03: Starts Journey for Dhaka"
+    },
+    {
+        "id": "003",
+        "image": "https://i.ibb.co/ykbv5G7/3.jpg",
+        "title": "Largest Sea Beach in The World",
+        "description": "Cox's Bazar - The Never Ending Sea Beach",
+        "location": "Cox's Bazar",
+        "duration": "3days",
+        "price": "3D/2N, BDT 24,300/person",
+        "included": "Hotel, Breakfast,Buffet, Tours, Airport transfers",
+        "detail": "Day - 01: Arrival at Cox'sbazar.  Upon arrival at Cox's Bazar check in at the hotel. Hotel Representative will pick you from the airport to the hotel. Most of the time, the room is available to check-in) Overnight night stay in Cox’s Bazar .  Day - 02: Free Day   Explore the city by your own. Day- 03: Departure"
+    },
+    {
+        "id": "004",
+        "image": "https://i.ibb.co/4ZxLXk6/4.jpg",
+        "title": "Simply Maldives",
+        "location": "Maldives",
+        "Duration": "3 Days",
+        "price": "3D/2N, BDT 49,900/person",
+        "description": "The Nautilus Maldives",
+        "included": "Air Tickets,Hotel, Breakfast, Tours, Airport transfers",
+        "detail": "Day 1: Arrival at Hulhumale. After arrival at the airport. Transfer to the Hotel on your own. Check-in at the hotel. Enjoy free time on your own. Overnight stay at the hotel.  Day 2: Free Day After having breakfast at the hotel, the rest of the day is for your own purpose. Day 3: Departure From Hulhumale. Breakfast at the hotel. Transfer to Velana International Airport on your own. Catch the return flight to Dhaka Bangladesh."
+    },
+    {
+        "id": "005",
+        "image": "https://i.ibb.co/jVTGWqh/10.jpg",
+        "title": "Golden Traingle",
+        "location": "Maldives",
+        "duration": "3 Days",
+        "price": "3D/2N, BDT 17,050/person",
+        "included": "Hotel, Breakfast, Tours, Airport transfers",
+        "description": "New Delhi, India - Jaipur, India - Agra, India",
+        "detail": "Day 01: Delhi Airport –Hotel Day, Day 02: Delhi Hotel + Full day Sightseeing Day 03: Delhi –Agra Sightseeing (216 Km / 3 ½ hrs) On the way Visit Mathura Day 04: Agra –Jaipur via Fatehpur Sikri (245 Km / 4 hrs) Day 05: Jaipur Local Sightseeing Day 06: Hotel –Jaipur Railway Station / Airport"
+    },
+    {
+        "id": "006",
+        "image": "https://i.ibb.co/qR8JxJj/6.jpg",
+        "title": "Heaven on Earth",
+        "location": "Kathmundu,Nepal",
+        "duration": "6 Days",
+        "price": "6D/5N, BDT 34,100/person",
+        "description": "The Nautilus Maldives",
+        "included": "Air Tickets, Hotel, Breakfast, Tours, Airport transfers",
+        "detail": "Day 1: Arrival at Kathmandu - transfer to hotel Day 2: Transfer to Pokhara by private Car Day 3: Half day Pokhara sightseeing Day 4: Sarangkot Sunrise tour and transfer to Nagarkot Day 5: Nagarkot to Kathmandu transferDay 6: Kathmandu – fly back to Dhaka"
+    }
+]
