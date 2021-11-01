@@ -5,7 +5,7 @@ import Service from '../Service/Service';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://ghastly-beast-92427.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])
@@ -28,13 +28,3 @@ const Services = () => {
 };
 
 export default Services;
-
-// https://i.ibb.co/92C2sWh/1.png
-// https://i.ibb.co/NTG20z4/2.jpg
-// https://i.ibb.co/7G9BYz5/3.jpg
-// https://i.ibb.co/WP812qY/4.png
-// https://i.ibb.co/hVR7tTw/5.jpg
-// https://i.ibb.co/b7RPBMQ/6.jpg
-// https://i.ibb.co/1Jkv2P3/7.jpg
-// https://i.ibb.co/YpvhtyR/8.jpg
-// https://i.ibb.co/X8fGb7d/9.png

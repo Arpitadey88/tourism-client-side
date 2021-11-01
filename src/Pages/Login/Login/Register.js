@@ -99,7 +99,7 @@ const Register = () => {
     return (
         <div className="m-5">
             <form onSubmit={handleRegistration}>
-                <h3 className="text-primary text-center">Please {isLogin ? 'Login' : 'Register'}</h3>
+                <h3 className="text-primary text-center">Please {isLogin ? 'Login' : 'Register'} And Updated </h3>
                 {!isLogin && <div className="row mb-3">
                     <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
                     <div className="col-sm-10">

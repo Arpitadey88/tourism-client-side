@@ -19,6 +19,7 @@ const Header = () => {
                     <Nav.Link as={HashLink} to="/home#home">Our Platform</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#banner">About</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#services">Feature</Nav.Link>
+                    <Nav.Link as={HashLink} to="/register">Register</Nav.Link>
                     {/* <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link> */}
                     {/* <Nav.Link as={HashLink} to="/booking">Booking</Nav.Link> */}
 
@@ -30,8 +31,8 @@ const Header = () => {
                     </Navbar.Text>
 
                     <NavDropdown title="Dashboard" id="basic-nav-dropdown">
-                        <Nav.Link as={HashLink} to="#action/3.1">My Order</Nav.Link>
-                        <Nav.Link as={HashLink} to="#action/3.1">Manage All Order</Nav.Link>
+                        <Nav.Link as={Link} to="/myOrder#myOrder">My Order</Nav.Link>
+                        <Nav.Link as={Link} to="/manageOrders#manageOrders">Manage All Order</Nav.Link>
                         <NavDropdown.Divider />
                         <Nav.Link as={Link} to="/addNewService#addNewService">Add New Service</Nav.Link>
                     </NavDropdown>

@@ -19,7 +19,8 @@ const Login = () => {
             })
     }
     return (
-        <div className="m-5 border p-5">
+        <div className="m-5 border p-3">
+            <h2 className="text-center py-2" style={{ color: 'chocolate' }}>Please Log In With A Google Account</h2>
             <div className="row g-0">
 
                 <div className="col-md-6 container-fluid">
