@@ -1,0 +1,7 @@
+.cart{
+    box-shadow: 1px 1px 5px gray;
+}
+.place-img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}

@@ -11,10 +11,11 @@ const Services = () => {
     }, [])
 
     return (
-        <div id="services">
-            <h1 style={{ color: 'crimson' }}>OUR DESTINATIONS</h1>
-            <h4 className="text-center" style={{ color: 'grey' }}>CHOOSE YOUR NEXT DESTINATION</h4>
-            <div className="row row-cols-1 row-cols-md-3">
+        <div className="my-4" id="services">
+            <h1 className="text-center" style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }}>Smooth travel in one place</h1>
+            <h4 className="text-center my-3" style={{ color: 'grey' }}>Chose Your Next Destination</h4>
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex align-item-center 
+            justify-content-center">
                 {
                     services.map(service => <Service
                         key={service.id}
