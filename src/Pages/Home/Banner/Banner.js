@@ -11,8 +11,8 @@ const Main = () => {
                     <Card className="rounded-2 border-0 ">
                         <img className="p-2 rounded-2 bg" src={image} alt="" />
                         <Card.ImgOverlay>
-                            <div className="py-5-5 ps-3">
-                                <h2 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="my-5 py-5 ">Click Travels !!</h2>
+                            <div className="py-5 ps-3">
+                                <h2 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="">Click Travels !!</h2>
                                 <h4 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="mt-5 pt-3">
                                     BEST Travel Management Company
                                     <br />
