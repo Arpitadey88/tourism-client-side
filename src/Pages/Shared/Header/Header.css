@@ -1,4 +1,11 @@
+.navbar{
+   height: 50px;
+}
 .nav-text{
    font-size: large;
    font-weight: 500;
+   color: midnightblue;
+}
+#basic-nav-dropdown,Link{
+   color: midnightblue;
 }

@@ -13,10 +13,10 @@ const Service = ({ service }) => {
             </div>
             <Card.Body className="px-2">
                 <h4 style={{ color: 'chocolate' }}>{name}</h4>
-                <h6 style={{ color: 'slategrey' }}>{location}</h6>
+                <h6 style={{ color: 'midnightBlue' }}>{location}</h6>
                 <h6 style={{ color: 'chocolate' }}>{price}</h6>
-                <p style={{ color: 'slategrey' }}>{description}</p>
-                <Link to={`/details/${_id}`}><button className="btn btn-primary my-2"> Book Now </button></Link>
+                <p style={{ color: 'midnightBlue' }}>{description}</p>
+                <Link to={`/details/${_id}`}><button className="btn btn-style my-2"> Book Now </button></Link>
             </Card.Body>
         </Card>
 

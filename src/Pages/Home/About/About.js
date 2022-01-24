@@ -2,40 +2,38 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div>
-            <div className="section-container mx-auto text-center my-5 py-3">
+        <div className='container-fluid'>
+            <div className="text-center my-5 py-3">
                 <h1 style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }} className="primary-color fw-bold">What Can We Offer You With?</h1>
-                <h5 className="text-muted">Our institute provides care for our regions most precious resource: human. We care for the growing needs of our community.</h5>
+                <h5 style={{ color: 'midnightBlue' }}>Our institute provides care for our regions most precious resource: human. We care for the growing needs of our community.</h5>
             </div>
 
-
-            <div className="container mt-2 pb-5">
+            <div className="mt-1 pb-5">
                 <div className="row ">
                     <div className="col-lg-4 text-center">
-                        <i className="fas fa-code-branch fs-1 text-primary"></i>
-                        <h1 className="text-danger fw-bold my-2">600+</h1>
-                        <p className="text-muted fw-bold">Bring best quality tourist services worldwide.</p>
+                        <i style={{ color: 'midnightBlue' }} className="fas fa-code-branch fs-1"></i>
+                        <h1 style={{ color: 'crimson' }} className="fw-bold my-2">600+</h1>
+                        <p style={{ color: 'midnightBlue' }} className="fw-bold">Bring best quality tourist services worldwide.</p>
                     </div>
 
                     <div className="col-lg-4 text-center">
-                        <i class="fas fa-users fs-1 text-primary"></i>
-                        <h1 className="text-danger fw-bold my-2">900+</h1>
-                        <p className="text-muted fw-bold">100% trusted travel agency</p>
+                        <i style={{ color: 'midnightBlue' }} class="fas fa-users fs-1"></i>
+                        <h1 style={{ color: 'crimson' }} className="fw-bold my-2">900+</h1>
+                        <p style={{ color: 'midnightBlue' }} className="fw-bold">100% trusted travel agency</p>
                     </div>
 
                     <div className="col-lg-4 text-center">
-                        <i class="fas fa-map-marker-alt fs-1 text-primary"></i>
-                        <h1 className="text-danger fw-bold my-2">150+</h1>
-                        <p className="text-muted fw-bold">Picking where to go out of 150 countries worldwide.</p>
+                        <i style={{ color: 'midnightBlue' }} class="fas fa-map-marker-alt fs-1"></i>
+                        <h1 style={{ color: 'crimson' }} className="fw-bold my-2">150+</h1>
+                        <p style={{ color: 'midnightBlue' }} className="fw-bold">Picking where to go out of 150 countries worldwide.</p>
                     </div>
-
                 </div>
             </div>
 
-            <div className='container px-5 py-5'>
+            <div className='mx-5 px-4 py-5'>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <h1 style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }} className='mb-4'>How does it work?</h1>
-                    <div class="accordion-item">
+                    <h1 style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }} className='mb-3'>How does it work?</h1>
+                    <div class="accordion-item py-3">
                         <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Getting your key
@@ -46,7 +44,7 @@ const About = () => {
                                 You will be able to communicate directly with your host to find out how to get your keys. Whether you meet them personally or simply use a lockbox, it will be easy for you to access your property and start enjoying your holiday!</div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item py-3">
                         <h2 class="accordion-header" id="flush-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                 Communicating with your host
@@ -57,7 +55,7 @@ const About = () => {
                                 You can always contact your host with any questions leading up to your trip. Perhaps you want to let them know what time you are arriving or you have a special request  enjoy stress-free communication at all times.</div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item py-3">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                 Checking in

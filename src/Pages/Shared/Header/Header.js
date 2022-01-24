@@ -3,22 +3,22 @@ import { Button, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
-import logo from '../../../image/logoM.png';
+import logo from '../../../image/logo.png';
 import './Header.css';
 
 
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <Navbar style={{ backgroundColor: 'white' }} className="container-fluid" sticky="top" collapseOnSelect expand="lg" variant="dark">
+        <Navbar style={{ backgroundColor: 'white' }} className="container-fluid navbar" sticky="top" collapseOnSelect expand="lg" variant="dark">
             < >
                 <Navbar.Brand href="#home">
-                    <img alt="" src={logo} width="80" height="50 "
+                    <img alt="" src={logo} width="50" height="40 "
                         className="d-inline-block"
-                    /><span className="nav-text fs-5 text-primary">ClickTravel</span></Navbar.Brand>
+                    /><span style={{ color: 'midnightBlue' }} className="nav-text fs-5 ps-1">ClickTravel</span></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Nav.Link className="nav-text fs-5" as={HashLink} to="/home#home">Banner</Nav.Link>
+                    <Nav.Link className="nav-text fs-5 " as={HashLink} to="/home#home">Banner</Nav.Link>
                     <Nav.Link className="nav-text fs-5" as={HashLink} to="/home#banner">About</Nav.Link>
                     <Nav.Link className="nav-text fs-5" as={HashLink} to="/home#services">Feature</Nav.Link>
                     <Nav.Link className="nav-text fs-5" as={HashLink} to="/register">Register</Nav.Link>
@@ -33,10 +33,9 @@ const Header = () => {
                     </Navbar.Text>
 
                     <NavDropdown className="nav-text fs-5" title="Dashboard" id="basic-nav-dropdown">
-                        <Nav.Link as={Link} to="/myOrder#myOrder">My Order</Nav.Link>
-                        <Nav.Link as={Link} to="/manageOrders#manageOrders">Manage All Order</Nav.Link>
-                        <NavDropdown.Divider />
-                        <Nav.Link as={Link} to="/addNewService#addNewService">Add New Service</Nav.Link>
+                        <Nav.Link className='nav-text border-bottom' as={Link} to="/myOrder#myOrder">My Order</Nav.Link>
+                        <Nav.Link className='nav-text border-bottom' as={Link} to="/manageOrders#manageOrders">Manage Order</Nav.Link>
+                        <Nav.Link className='nav-text' as={Link} to="/addNewService#addNewService">Add Service</Nav.Link>
                     </NavDropdown>
                 </Navbar.Collapse>
             </>

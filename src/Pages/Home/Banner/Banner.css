@@ -1,3 +1,57 @@
-/* .bg{
+.bg{
+    background: rgba(0,0,0,0.4)url(../../../image/banner8.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
     background-blend-mode: darken;
-} */
+
+    /* clip-path: circle(70% at 8% 50%); */
+}
+.text{
+    text-align: justify;
+}
+.text-bg{
+    clip-path: circle(78% at 73% 40%);
+    background-color: aliceblue;
+    
+}
+@media only screen and (max-width:1250px){
+    .text-bg{
+        clip-path: circle(68% at 75% 47%);
+        background-color: aliceblue;
+        padding: 0 40px;
+    }
+    .col-md-6 h5{
+        font-size: 17px;
+    }
+    .col-md-6 h2{
+        font-size: 22px;
+    }
+    
+}
+@media only screen and (max-width:980px){
+    .text-bg{
+        background: transparent;
+        clip-path: inset(0 0 0 0);
+        margin: 5px;
+        padding: 5px;
+    }
+    .col-md-6 h1{
+        font-size: 22px;
+        margin: 20px 0 ;
+        padding: 0;
+    }
+    .col-md-6 h3{
+    font-size: 18px;
+    }
+    .col-md-6 h5{
+        color: white!important;
+        margin: 0;
+        font-size: 13px;
+    }
+    .col-md-6 h2{
+        color: white!important;
+        font-size: 20px;
+    }
+}
