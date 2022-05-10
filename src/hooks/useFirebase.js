@@ -47,11 +47,21 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [])
 
+    // const logOut = () => {
+    //     setIsLoading(true);
+    //     signOut(auth)
+    //         .then(() => { })
+    //         .finally(() => setIsLoading(false));
+    // }
     const logOut = () => {
         setIsLoading(true);
-        signOut(auth)
-            .then(() => { })
+        signOut(auth).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        })
             .finally(() => setIsLoading(false));
+
     }
 
     return {

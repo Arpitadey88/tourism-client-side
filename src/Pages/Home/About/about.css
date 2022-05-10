@@ -1,0 +1,135 @@
+.info-details{
+  background: linear-gradient(to right, rgba(250,158,44,.8), rgba(143,80,251,.8)), url("../../../image/places-bg.jpg") bottom center no-repeat;
+    background-size: cover;
+}
+/* =======================FAQ area styles======================= */
+.faq-img{
+  height: 450px;
+  width: 95%;
+}
+/* .accordion-item {
+    margin: 1.3rem 0;
+    border: none;
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 10%);
+  }
+  
+  .accordion-item h4 button {
+    padding: 1.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .accordion-item h4 button.collapsed {
+    color: white;
+    background-color: orange;
+  }
+  
+  .accordion-item .accordion-body {
+    padding-top: 20px;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #350A4E;
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../../../image/arrow.png);
+  }
+  
+  .accordion-body {
+    color: gray;
+    padding: 2.6rem 1.7rem;
+
+  } */
+  .accordion-item {
+    margin: 1.5rem 0;
+    border: none;
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 10%);
+    border-radius: 1rem !important;
+  }
+  
+  .accordion-header,
+  .accordion-collapse {
+    border-radius: 1rem !important;
+  }
+  
+  .accordion-button {
+    border-radius: 1rem !important;
+  }
+  
+  .accordion-item h2 button {
+    background-color: orange;
+    color: #fff;
+    padding: 1.6rem;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 2rem;
+  }
+  
+  .accordion-item h2 button .down-icon {
+    position: absolute;
+    color: #fff;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(-180deg);
+    -ms-transform: translateY(-50%) rotate(-180deg);
+    transform: translateY(-50%) rotate(-180deg);
+    -webkit-transition: 0.1s all ease;
+    -o-transition: 0.1s all ease;
+    transition: 0.1s all ease;
+  }
+  
+  .accordion-item h2 button .down-icon:hover {
+    text-decoration: none;
+    color: #fff;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .accordion-item h2 button.collapsed {
+    color: white;
+    border-radius: 2rem;
+  }
+  
+  .accordion-item h2 button.collapsed .down-icon {
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .accordion-item .accordion-body {
+    padding-top: 1rem;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: white;
+    background-color: orange;
+    border-radius: 1rem 1rem 0 0 !important;
+  }
+  
+  .accordion-button:not(.collapsed) .down-icon {
+    color: #fff;
+  }
+  
+  .accordion-body {
+    color: gray;
+    padding: 1.7rem 1.2rem;
+  }
+  
+  @media  only screen and (max-width: 425px) {
+    .faq-img{
+        height: 200px;
+    }
+}

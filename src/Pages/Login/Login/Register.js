@@ -1,146 +1,63 @@
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, updateProfile } from '@firebase/auth';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import initializeAuthentication from '../Firebase/firebase.init';
+import  image  from "../../../image/reg.png";
 
-initializeAuthentication();
-const googleProvider = new GoogleAuthProvider();
 
 const Register = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [isLogin, setIsLogin] = useState(false);
-
-    const auth = getAuth();
-
-    const handleGoogleLogin = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-            })
-    }
-
-    const toggleLogin = e => {
-        setIsLogin(e.target.checked);
-    }
-
-    const handleNameChange = e => {
-        setName(e.target.value);
-    }
-    const handleEmailChange = e => {
-        setEmail(e.target.value);
-    }
-    const handlePasswordChange = e => {
-        setPassword(e.target.value);
-    }
-
-    const handleRegistration = e => {
-        e.preventDefault();
-        console.log(email, password);
-        if (password.length < 8) {
-            setError('Password must be at least 8 character long.')
-            return;
-        }
-
-        if (isLogin) {
-            processLogin(email, password);
-        }
-        else {
-            registerNewUser(email, password);
-        }
-
-    }
-
-    const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setError('');
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
-
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setError('');
-                verifyEmail();
-                setUserName();
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(result => { })
-    }
-    const verifyEmail = () => {
-        sendEmailVerification(auth.currentUser)
-            .then(result => {
-                console.log(result);
-            })
-    }
-
-    const handleResetPassword = () => {
-        sendPasswordResetEmail(auth, email)
-            .then(result => { })
-    }
+  
 
     return (
-        <div className="m-5">
-            <form onSubmit={handleRegistration}>
-                <h3 className="text-primary text-center">Please {isLogin ? 'Login' : 'Register'} And Updated </h3>
-                {!isLogin && <div className="row mb-3">
-                    <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
-                    <div className="col-sm-10">
-                        <input onBlur={handleNameChange} type="text" className="form-control" iud="inputName" placeholder="Your Name" required />
-                    </div>
-                </div>
-                }
-                <div className="row mb-3">
-                    <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
-                    <div className="col-sm-10">
-                        <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" required />
-                    </div>
-                </div>
-                <div className="row mb-3">
-                    <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
-                    <div className="col-sm-10">
-                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword3" required />
-                    </div>
-                </div>
-                <div className="row mb-3">
-                    <div className="col-sm-10 offset-sm-2">
-                        <div className="form-check">
-                            <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck1" />
-                            <label className="form-check-label" htmlFor="gridCheck1">
-                                Already Registered?
-                            </label>
+        <div style={{ backgroundColor: '#92A9BD' }} className="text-white">
+           <div className="container py-md-5 pt-5">
+           <h2 className="text-center"> Please Register & Stay Tuned</h2>
+            <div  className="row g-0  d-flex justify-content-around">
+
+                <div style={{ height: '470px' }} className="col-md-6 pe-md-5 py-3 order-lg-0 order-1">
+                    <h2 className="text-center pt-2 pb-md-4"> Register Form</h2>
+
+                    <form onSubmit=''>
+                        <div className="row mb-2 mb-md-4">
+                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Name</label>
+                            <div className="col-sm-10">
+                                <input type="name" className="form-control" id="inputEmail3" placeholder="Your Name" name="name" onBlur='' required />
+                            </div>
                         </div>
+                        <div className="row mb-2 mb-md-4">
+                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+                            <div className="col-sm-10">
+                                <input type="email" className="form-control" id="inputEmail3" placeholder="Your Email" name="email" onBlur='' required />
+                            </div>
+                        </div>
+
+                        <div className="row mb-2 mb-md-4">
+                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
+                            <div className="col-sm-10">
+                                <input type="password" className="form-control" id="inputPassword3" placeholder="Password" name="password" onBlur='' required />
+                            </div>
+                        </div>
+                        <div className="row mb-2 mb-md-4">
+                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
+                            <div className="col-sm-10">
+                                <input type="password" className="form-control" id="inputPassword3" placeholder="Confirm Password" name="password2" onBlur='' required />
+                            </div>
+                        </div>
+
+                        <div className="text-center py-2 py-md-3">
+                            <Button style={{ backgroundColor: 'orange' }} className="px-5 border-0" size="lg" active type="submit">Register</Button>
+                        </div>
+                    </form>
+
+                    <div className="text-center pb-2 pb-md-3">
+                        <p className="">already registerd? Please <Link to="/login">Login</Link></p>
                     </div>
                 </div>
-                <div className="row mb-3 text-danger">{error}</div>
-                <Button type="submit" className="btn btn-primary px-5">{isLogin ? 'Login' : 'Register'}</Button>
-                <Button type="button" onClick={handleResetPassword} className="btn btn-danger ms-4">Forget Password</Button>
-            </form>
 
-            <div className="text-center fw-bold">-------------------OR--------------------</div>
-
-            <div className="text-center my-4">
-                <Button onClick={handleGoogleLogin} className="mt-1" variant="danger" size="lg" active>Google Sign In</Button>
-
-                <p className="my-2">new user? Please <Link to="/login">Login</Link></p>
+                <div className="col-md-6 d-flex align-items-center justify-content-center">
+                    <img className="cover-img" src={image} alt="" />
+                </div>
             </div>
+           </div>
         </div>
 
     );

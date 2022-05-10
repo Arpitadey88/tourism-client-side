@@ -13,6 +13,7 @@ import AddNewService from './Pages/AddNewService/AddNewService';
 import ManageOrder from './Pages/ManageOrder/ManageOrder';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import UpdateOrder from './Pages/UpdateOrder/UpdateOrder';
+import Contact from './Pages/Home/Contact/Contact';
 
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
-
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -36,6 +36,9 @@ function App() {
 
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
 
             <Route path="/register">

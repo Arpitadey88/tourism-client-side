@@ -1,0 +1,9 @@
+.contact-form-area {
+    background: url("../../../image/banner7.jpg") bottom center no-repeat;
+    background-size: cover;
+  }
+  .contact-heading{
+      color: white;
+      font-size: 2.6rem;
+      font-weight: 700;
+  }

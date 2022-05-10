@@ -1,39 +1,25 @@
-.App {
-  /* text-align: center; */
- background-color: SeaShell;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Teko:wght@500;600&family=Tourney:wght@600;700&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+
+    --purple-solid: #350a4f;
+    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent-alt: rgba(53, 10, 79, .5);
+    --purple-light: #8f50fb;
+    --orange-light: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--orange-light), var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--orange-light));
+ }
+ .App {
+  background-color: seashell;
+ }
+ body::-webkit-scrollbar {
+    width:8px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #350a4f;
+    border-radius: 1rem;
+    outline: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}

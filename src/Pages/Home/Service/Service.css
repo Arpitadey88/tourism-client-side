@@ -1,9 +1,9 @@
-.cart{
+/* .cart{
     box-shadow: 1px 1px 5px gray;
 }
 .place-img:hover{
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.9s ease-in-out;
 }
 .btn-style{
     background-color: chocolate;
@@ -15,4 +15,57 @@
     background-color: white;
     color: chocolate;
     border: 2px solid chocolate
+} */
+.featured-place{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+}
+.featured-place::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(53, 10, 79, .5);
+    z-index: -1;
+}
+.places-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.place-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin:  2rem 0;
+}
+.btn{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .2rem 2rem;
+    border-radius: 18rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border: none; 
+   
+}
+.btn-gradient{
+    background-image:var(--gradient-color);
+
+}
+.btn:hover{
+    background-image: var(--gradient-color-alt);
+    color: #fff;
 }

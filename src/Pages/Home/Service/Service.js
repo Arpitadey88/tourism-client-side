@@ -1,24 +1,22 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
     const { _id, name, description, img, location, price } = service;
     return (
-        <Card style={{ width: '355px', height: '440px' }} className="cart mx-5 my-4 p-0 rounded-3 place-img">
-            <div className=""><img className="rounded-top" style={{
-                height: '230px', width: '354px'
-            }} src={img} alt="" />
+        <div className="col-md-4 cols-12">
+            <div className="featured-place mx-lg-auto place-img px-3">
+                <div className="item">
+                    <img className="rounded-top places-img" src={img} alt="" />
+                    <button  style={{ backgroundColor: 'orange' }} className="btn  rounded-pill fs-6 px-5 py-1"><span>{location}</span></button>
+                    <h2 className='place-name'>{name}</h2>
+                    <h6 className='place-price"'>{price}</h6>
+                    <p >{description}</p>
+                    <Link style={{ textDecoration: 'none' }} to={`/details/${_id}`}><button className="btn btn-gradient my-2 py-2 px-5"> Book Now</button></Link>
+                </div>
             </div>
-            <Card.Body className="px-2">
-                <h4 style={{ color: 'chocolate' }}>{name}</h4>
-                <h6 style={{ color: 'midnightBlue' }}>{location}</h6>
-                <h6 style={{ color: 'chocolate' }}>{price}</h6>
-                <p style={{ color: 'midnightBlue' }}>{description}</p>
-                <Link to={`/details/${_id}`}><button className="btn btn-style my-2"> Book Now </button></Link>
-            </Card.Body>
-        </Card>
+        </div>
 
 
     );

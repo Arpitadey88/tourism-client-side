@@ -1,63 +1,70 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import image from '../../../image/banner8.jpg';
+import img1 from '../../../image/baggage-sign.png';
+import img2 from '../../../image/car.webp';
+import img3 from '../../../image/plane.webp';
+import img4 from '../../../image/trips.webp';
+import img5 from '../../../image/ships.webp';
+import img6 from '../../../image/activities.webp';
 import './Banner.css';
 
 const Main = () => {
     return (
-        // <div className=" m-5 p-5 bg-white">
-        //     <Card className="rounded-2 border-danger">
-        //         <img className="rounded-2 bg" src={image} alt="" />
-        //         <Card.ImgOverlay>
-        //             <div className="row row-cols-md-2 row-cols-lg-2 row-cols-sm-1  rounded-2 border-primary " >
-        //                 <div className="col-md-5">
-        //                     <h2 style={{ color: 'red', fontFamily: 'Tourney, cursive' }} className="">Click Travels !!</h2>
-        //                     <h4 style={{ color: 'red', fontFamily: 'Tourney, cursive' }} className=" pt-3">
-        //                         BEST Travel Management Company
-        //                         <br />
-        //                         BEST Self-Booking Tool
-        //                         <br />
-        //                         Business Travel Awards 2020
-        //                     </h4>
-        //                 </div>
-
-        //                 <div className="col-md-7">
-        //                     <h2 className="fw-bold" style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }}>Travel Smooth!!</h2>
-        //                     <h6 className='text' style={{ color: 'midnightBlue' }}>With our all in one platform for booking and managing trains, flights, hotels and car hire with 24/7 customer support. We provide international travel products and services including Flights, Accommodation, Land transport, Tours, Holiday packages, Visa processing among many other services. With a team of experienced travel professionals we deliver exactly what we promise. We do what we say and say what we do.</h6>
-        //                     {/* <h6> We cater to a wide range of needs including Leisure and Business travel. Having a wide network around the world we provide holiday packages to 100+ destinations. From budget travelers to ultra luxury 7 star tourists we cater to every need. Delivering value for your money is our prime goal.</h6> */}
-        //                 </div>
-        //             </div>
-
-        //         </Card.ImgOverlay>
-        //     </Card>
-        // </div>
-
-        <div className='m-5 p-5 bg-white ' id="home">
-            <div className="row row-cols-md-2 row-cols-1 bg ms-1 ">
-                <div className="col-md-6 d-flex align-items-center ps-5">
-                    <div>
-                        <h1 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="py-3">Click Travels !!</h1>
-                        <h3 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="">
-                            BEST Travel Management Company
-                            <br />
-                            BEST Self-Booking Tool
-                            <br />
-                            Business Travel Awards 2020
-                        </h3>
+        <div className="div">
+            <div class="container p-0 communication-section">
+                <div class="row communication-area mx-auto my-0">
+                    <div class="col-md-2 col-6 transports  d-flex align-items-center justify-content-center">
+                        <img class="baggage" src={img1} alt="" />
+                        <span class="ps-1 fs-6">HOTEL</span>
+                    </div>
+                    <div class="col-md-2 col-6 transports">
+                        <img src={img2} alt="" />
+                        <span class="fs-6">CAR RENTALS</span>
+                    </div>
+                    <div class="col-md-2 col-6 transports">
+                        <img src={img3} alt="" />
+                        <span class="fs-6">FLIGHTS</span>
+                    </div>
+                    <div class="col-md-2 col-6 transports">
+                        <img src={img4} alt="" />
+                        <span class="fs-6">TRIPS</span>
+                    </div>
+                    <div class="col-md-2 col-6 transports">
+                        <img src={img5} alt="" />
+                        <span class="fs-6">CRUISES</span>
+                    </div>
+                    <div class="col-md-2 col-6 transports">
+                        <img src={img6} alt="" />
+                        <span class="fs-6">ACTIVITIES</span>
                     </div>
                 </div>
-
-                <div className=" col-md-6 text-bg d-flex align-items-center justify-content-center">
-                    <div className='px-3 mx-3'>
-                        <h2 className="fw-bold text-center" style={{ color: 'crimson', fontFamily: 'Tourney, cursive' }}>Travel Smooth!!</h2>
-                        <h5 className='text mt-2 mx-2' style={{ color: 'midnightBlue' }}>With our all in one platform for booking and managing trains, flights, hotels and car hire with 24/7 customer support. We provide international travel products and services including Flights, Accommodation, Land transport, Tours, Holiday packages, Visa processing among many other services. With a team of experienced travel professionals we deliver exactly what we promise. We do what we say and say what we do.</h5>
-                    </div>
-
-                </div>
-
             </div>
+            <div className='m-md-5 m-3 p-3 p-md-5 bg-white ' id="about">
+                <div className="row bg d-flex mx-auto">
+                    <div className="col-md-6 col-12 d-flex align-items-center ps-md-5">
+                        <div>
+                            <h1 style={{ color: 'orange', fontFamily: 'Tourney, cursive' }} className="my-1 pb-md-4">Click Travels !!</h1>
+                            <h3 style={{ color: 'white', fontFamily: 'Tourney, cursive' }} className="">
+                                BEST Travel Management Company
+                                <br />
+                                BEST Self-Booking Tool
+                                <br />
+                                Business Travel Awards 2020
+                            </h3>
+                        </div>
+                    </div>
 
-        </div >
+                    <div className=" col-md-6 col-12 text-bg d-flex align-items-center">
+                        <div className='px-md-3 mx-md-3 travel-details'>
+                            <h2 className="fw-bold text-center mb-md-2" style={{ color: '#fff', fontFamily: 'Tourney, cursive' }}>Travel Smooth!!</h2>
+                            <h5 className='text mt-md-2 mx-2 mt-1' style={{ color: '#fff' }}>With our all in one platform for booking and managing trains, flights, hotels and car hire with 24/7 customer support. We provide international travel products and services including Flights, Accommodation, Land transport, Tours, Holiday packages, Visa processing among many other services. With a team of experienced travel professionals we deliver exactly what we promise.</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div >
+        </div>
     );
 };
 
