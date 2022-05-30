@@ -75,7 +75,7 @@ const Details = () => {
                     <div className="col-md-6 submit-order pt-4">
                         <h2 className="text-center pb-3 font-google" style={{ color: 'orange' }}>Book Package Now</h2>
                         <form className="mx-3" onSubmit={handleAddBooking}>
-                            <input type="text" ref={destinationRef} defaultValue={service.location} />
+                            <input type="text" ref={destinationRef} defaultValue={service.name} />
                             <br />
                             <input type="text" ref={imgRef} defaultValue={service.img} />
                             <br />
@@ -92,7 +92,7 @@ const Details = () => {
                         </form>
 
                         <div className="text-center">
-                            <Link className="text-decoration-none" to="/myOrder#myOrders"><Button className="mx-5 px-5 py-2 mt-5">See Order</Button></Link>
+                            <Link className="text-decoration-none" to="/manageOrders#manageOrders"><Button className="mx-5 px-5 py-2 mt-5">See Order</Button></Link>
                         </div>
                     </div>
                     <div className='text-center'>

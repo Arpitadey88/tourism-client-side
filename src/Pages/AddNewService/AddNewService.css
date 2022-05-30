@@ -1,19 +1,26 @@
 .add-service{
-    background-color: azure;
-    border: 2px solid grey;
-    border-radius: 10px;
-    margin: 50px 200px;
-    padding:20px 50px;
+    padding:22px;
 }
  .add-service form{
-    padding: 5px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
  .add-service form input, textarea{
+    margin-bottom: .7rem;
+    padding: .3rem;
     border-radius: 5px;
-    width: 40%;
-    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #323232;
  } 
+
+ @media only screen and (max-width:425px) {
+    .add-service, .add-service form{
+        padding: 0;
+    }
+    .add-service form input, textarea{
+        width: 95%;
+     } 
+ }

@@ -5,22 +5,23 @@ import NotFound from './Pages/Home/NotFound/NotFound';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Login from './Pages/Login/Login/Login';
-import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Details from './Pages/Details/Details/Details/Details';
-import Register from './Pages/Login/Login/Register';
+// import Register from './Pages/Login/Login/Register';
 import AddNewService from './Pages/AddNewService/AddNewService';
 import ManageOrder from './Pages/ManageOrder/ManageOrder';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import UpdateOrder from './Pages/UpdateOrder/UpdateOrder';
 import Contact from './Pages/Home/Contact/Contact';
+import Register from './Pages/Login/Register/Register';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
+          {/* <Header></Header> */}
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -66,7 +67,7 @@ function App() {
             </Route>
           </Switch>
 
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
         </Router>
       </AuthProvider>
 

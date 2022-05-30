@@ -72,9 +72,9 @@ const Header = () => {
                                         <Nav.Link as={HashLink} className="nav-link" to="/home#services">Feature</Nav.Link>
                                     </li>
 
-                                    <li className="ms-3 ">
+                                    {/* <li className="ms-3 ">
                                         <Nav.Link as={HashLink} className="nav-link py-1 py-md-2" to="/register">Register</Nav.Link>
-                                    </li>
+                                    </li> */}
 
                                     <li className='ms-3 ms-md-0'>
                                         <NavDropdown className="nav-link py-0" title="Dashboard" id="basic-nav-dropdown">

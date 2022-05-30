@@ -1,17 +1,14 @@
-.submit-order{
-    background-color: azure;
-    border: 1px;
-    
-}
  .submit-order form{
-    margin-top: 50px;
-    padding: 2px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
  .submit-order form input, textarea{
-    width: 40%;
-    margin: 10px;
+    width: 60%;
+    margin: 6px;
+    padding: .3rem;
+    border-radius: 5px;
+    border: 1px solid #323232;
  } 

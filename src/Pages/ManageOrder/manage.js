@@ -5,29 +5,33 @@ import './ManageOrder.css';
 
 const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
+
     useEffect(() => {
         fetch('https://ghastly-beast-92427.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
 
-    const handleDelete = id => {
-        const proceed = window.confirm('Are you sure,you want to delete?')
+    // DELETE AN ORDER
+    const handleDeleteOrder = id => {
+        const proceed = window.confirm('Are you sure, you want to remove??');
         if (proceed) {
-            fetch(`http://localhost:5000/logInService/${id}`, {
-                method: "DELETE",
+            const url = `https://ghastly-beast-92427.herokuapp.com/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
-                        const remainingUsers = orders.filter(user => user._id !== id);
-                        setOrders(remainingUsers);
+                        alert('Successfully Deleted Order')
+                        const remainingOrders = orders.filter(order => order._id !== id)
+                        setOrders(remainingOrders);
                     }
                 })
         }
-
     }
+
+
 
     return (
         <div id="manageOrders">
@@ -45,13 +49,13 @@ const ManageOrder = () => {
                             </tr>
                         </thead>
                         {
-                            orders?.map(order => <tbody key={order._id}>
+                            orders.map(order => <tbody key={order._id}>
                                 <tr>
-
                                     <td>{order.userName}</td>
                                     <td>{order.userEmail}</td>
                                     <td>{order.userNumber}</td>
-                                    <td><button className="btn btn-danger" onClick={() => handleDelete(order._id)}>Remove</button></td>
+                                    {/* <td><Link className='text-decoration-none' to={`/update/${order._id}`}><button className="btn btn-primary">Edit</button></Link></td> */}
+                                    <td><Link className='text-decoration-none'><button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Remove</button></Link></td>
                                 </tr>
                             </tbody>)
                         }

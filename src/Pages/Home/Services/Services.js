@@ -12,8 +12,9 @@ const Services = () => {
 
     return (
         <div className="my-md-5 my-3 container" id="services">
+             <h4 className="text-center font-google" style={{ color: 'orange' }}>Chose Your Next Destination</h4>
             <h1 className="text-center" style={{ color: '#350A4E', fontFamily: 'Tourney, cursive' }}>Smooth travel in one place</h1>
-            <h4 className="text-center" style={{ color: 'orange' }}>Chose Your Next Destination</h4>
+           
             <div className="row g-4">
                 {
                     services.map(service => <Service
