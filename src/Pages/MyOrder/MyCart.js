@@ -1,61 +1,94 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-// import MyCart from './MyCart';
+
 
 const MyOrder = () => {
     const { user } = useAuth();
-    const [myOrders, setMyOrders] = useState([])
-    const [countDelete, setCountDelete] = useState(0);
+    const [services, setServices] = useState([])
+    console.log("orders service", services);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders?email=${user.email}`)
+        const key = { email: user.email };
+        fetch('http://localhost:5000/myOrder', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(key)
+        })
             .then(res => res.json())
-            .then(data => setMyOrders(data));
-    }, [countDelete]);
+            .then(data => {
+                setServices(data);
+            }).catch((err) => {
+                console.log(err);
+            })
 
-    const handleRemove = id => {
-        const url = ``
-        const proceed = window.confirm('Are you sure to cancelling this bookings');
+    }, [])
 
+
+
+
+    const handelDelete = id => {
+        const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(url, {
-                method: 'DELETE'
+            fetch(`http://localhost:5000/myOrder/${id}`, {
+                method: "DELETE",
             })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.acknowledged) {
-                        alert('Cancelled booking successfully');
-                        setCountDelete(countDelete + 1);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remainingUsers = services.filter(user => user._id !== id);
+                        setServices(remainingUsers);
                     }
-                });
+                })
         }
 
     }
-   
-    return (
-        <div className="py-5 text-center container">
-            <h2> Orders : {myOrders.length}</h2>
-            <h4 className="mt-5 google-font text-warning">yeea my bookings</h4>
-            <div className="row g-4 g-md-5">
 
-                {
-                    myOrders.map((row) => (
-                        <div
-                            key={row._id}
-                        >
-                            {/* <h5>{row.userName}</h5> */}
-                            <h5>{row.userDestination}</h5>
-                            <h5>{row.tourPrice}</h5>
-                            <h6>{row.userEmail}</h6>
-                            <h6>{row.userNumber}</h6>
-                        </div>    
-                    ))
-                    
-                }
-            </div>
-            <div>
-                <Link className='text-decoration-none' to="/home/services#services"><button className="btn btn-primary px-5 py-2 ">Back Home</button></Link>
+
+    return (
+        <div id="myOrders">
+            <h3 className="text-center primary-color">Your Order list {services.length}</h3>
+            <div className="container my-5">
+
+                <Table striped bordered hover variant="light">
+                    <thead>
+                        <tr>
+
+                            <th>User Name</th>
+                            {/* <th>User Address</th> */}
+                            <th>Service Name</th>
+                            <th>Price</th>
+                            <th>Service Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+
+
+                    {
+                        services.map(service =>
+                            <tbody key={service._id}>
+                                <tr>
+                                    <td>{service?.userName}</td>
+                                    {/* <td>{service?.Address}</td> */}
+                                    <td>{service?.userDestination}</td>
+                                    <td>{service?.tourPrice}</td>
+                                    <td className="w-25"><img src={service?.tourImg} className="w-25" alt="" /></td>
+                                    <td><button onClick={() => handelDelete(service?._id)} className="btn btn-danger">Remove</button></td>
+                                </tr>
+
+                            </tbody>
+                        )
+                    }
+                </Table>
+                <div className='text-center'>
+                    <Link className='text-decoration-none' to="/home/services#services"><button className="btn btn-primary px-5 py-2 ">Back Home</button></Link>
+                </div>
             </div>
         </div>
     );

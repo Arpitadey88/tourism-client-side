@@ -6,11 +6,11 @@ const UpdateOrder = () => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        const url = `https://ghastly-beast-92427.herokuapp.com/orders/${id}`;
+        const url = `http://localhost:5000/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
-    }, []);
+    }, [id]);
 
     const handleNameChange = e => {
         const updatedName = e.target.value;
@@ -25,7 +25,7 @@ const UpdateOrder = () => {
     }
 
     const handleUpdateOrder = e => {
-        const url = `https://ghastly-beast-92427.herokuapp.com/${id}`;
+        const url = `http://localhost:5000/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-
+import './MyOrder.css'
 
 const MyOrder = () => {
     const { user } = useAuth();
-    const [services, setServices] = useState([])
-    console.log("orders service", services);
+    const [services, setServices] = useState([]);
+    // console.log("orders service", services);
 
     useEffect(() => {
         const key = { email: user.email };
-        fetch('http://localhost:5000/myOrder', {
+        fetch('http://localhost:5000/logInService', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -25,16 +25,12 @@ const MyOrder = () => {
             }).catch((err) => {
                 console.log(err);
             })
+    }, [user.email])
 
-    }, [])
-
-
-
-
-    const handelDelete = id => {
+    const handleDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:5000/myOrder/${id}`, {
+            fetch(`http://localhost:5000/logInService/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
@@ -46,49 +42,47 @@ const MyOrder = () => {
                     }
                 })
         }
-
     }
 
-
     return (
-        <div id="myOrders">
-            <h3 className="text-center primary-color">Your Order list {services.length}</h3>
-            <div className="container my-5">
+        <div className='container' id="myOrders">
+            <h2 className="text-center py-3">Placed Order :  {services.length}</h2>
+            <div className="row row-cols-1 row-cols-md-2">
+                {services.length ?
+                    services.map(service =>
+                        <cart key={service._id}>
+                            <div className="col">
+                                <div style={{ width: '520px' }} className="card card-design border-0 my-md-2 px-md-3 rounded-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-6 overflow-hidden my-4">
+                                            <img style={{ height: '190px' }} src={service?.order?.img} className="img-fluid rounded-end" alt="..." />
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="card-body">
+                                                <h5 className="card-title mt-3">{service?.name}</h5>
+                                                <p className="card-text google-font my-0">{service?.email}</p>
+                                                <p className="card-text text-info my-0"><span className="text-dark"></span>{service?.order?.name}</p>
+                                                <p className="card-text text-info my-0"><span className="text-dark">Location </span>{service?.order?.location}</p>
+                                                <p className="card-text text-info my-0"><span className="text-dark">Need To Pay: </span>{service?.order?.price}</p>
+                                                <button onClick={() => handleDelete(service?._id)} className="btn btn-danger mt-md-2">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </cart>
+                    )
+                    :
+                    <Card style={{ width: '500px' }} className='border-0 text-center my-md-3 w-50 py-md-4'>
+                        <h3>Ooops!!</h3>
+                        <h5>You didn't books any package</h5>
+                        <p className="google-font">see our lattest offer package</p>
+                    </Card>
+                }
+            </div>
 
-                <Table striped bordered hover variant="light">
-                    <thead>
-                        <tr>
-
-                            <th>User Name</th>
-                            {/* <th>User Address</th> */}
-                            <th>Service Name</th>
-                            <th>Price</th>
-                            <th>Service Image</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-
-
-                    {
-                        services.map(service =>
-                            <tbody key={service._id}>
-                                <tr>
-                                    <td>{service?.userName}</td>
-                                    {/* <td>{service?.Address}</td> */}
-                                    <td>{service?.userDestination}</td>
-                                    <td>{service?.tourPrice}</td>
-                                    <td className="w-25"><img src={service?.tourImg} className="w-25" alt="" /></td>
-                                    <td><button onClick={() => handelDelete(service?._id)} className="btn btn-danger">Remove</button></td>
-                                </tr>
-
-                            </tbody>
-                        )
-                    }
-                </Table>
-                <div className='text-center'>
-                    <Link className='text-decoration-none' to="/home/services#services"><button className="btn btn-primary px-5 py-2 ">Back Home</button></Link>
-                </div>
+            <div className='text-center py-md-4'>
+                <Link className='text-decoration-none' to="/home/services#services"><button className="btn btn-primary px-5 py-2 ">Back Home</button></Link>
             </div>
         </div>
     );

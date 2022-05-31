@@ -1,17 +1,15 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
-
 import banner1 from '../../../image/index-banner.jpg';
 import banner2 from '../../../image/banner6.jpg';
 import banner3 from '../../../image/banner9.jpg';
 import './Main.css';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 const Banner = () => {
-    const location = useLocation();
+    // const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || './home';
+    // const redirect_uri = location.state?.from || './home';
 
     const handleViewAllServices = () => {
        history.push('/details');
