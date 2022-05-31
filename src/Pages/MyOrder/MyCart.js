@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         const key = { email: user.email };
-        fetch('http://localhost:5000/myOrder', {
+        fetch('https://blooming-fortress-72472.herokuapp.com/myOrder', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +34,7 @@ const MyOrder = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:5000/myOrder/${id}`, {
+            fetch(`https://blooming-fortress-72472.herokuapp.com/myOrder/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

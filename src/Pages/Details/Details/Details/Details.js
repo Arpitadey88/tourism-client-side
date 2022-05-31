@@ -14,7 +14,7 @@ const Details = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://blooming-fortress-72472.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setOrders(data));
 
@@ -23,7 +23,7 @@ const Details = () => {
     const onSubmit = data => {
         const orderService = orders
         data.order = orderService;
-        fetch('http://localhost:5000/orders', {
+        fetch('https://blooming-fortress-72472.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

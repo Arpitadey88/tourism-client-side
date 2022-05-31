@@ -6,7 +6,7 @@ import './ManageOrder.css';
 const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://blooming-fortress-72472.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
@@ -14,7 +14,7 @@ const ManageOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:5000/logInService/${id}`, {
+            fetch(`https://blooming-fortress-72472.herokuapp.com/logInService/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
