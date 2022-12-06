@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         const key = { email: user.email };
-        fetch('https://blooming-fortress-72472.herokuapp.com/logInService', {
+        fetch('http://localhost:5000/logInService', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const MyOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`https://blooming-fortress-72472.herokuapp.com/logInService/${id}`, {
+            fetch(`http://localhost:5000/logInService/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ const MyOrder = () => {
     }
 
     return (
-        <div className='container' id="myOrders">
+        <div  className='container border' id="myOrders">
             <h2 className="text-center py-3">Placed Order :  {services.length}</h2>
             <div className="row row-cols-1 row-cols-md-2">
                 {services.length ?
@@ -73,10 +73,10 @@ const MyOrder = () => {
                         </cart>
                     )
                     :
-                    <Card style={{ width: '500px' }} className='border-0 text-center my-md-3 w-50 py-md-4'>
-                        <h3>Ooops!!</h3>
-                        <h5>You didn't books any package</h5>
-                        <p className="google-font">see our lattest offer package</p>
+                    <Card style={{ width: '500px' }} className='border-0 text-center mx-auto my-md-5 w-50 py-md-4'>
+                        <h1>Ooops 😥!!</h1>
+                        <h3>You didn't books any package yet!!</h3>
+                        <h5 className="google-font my-1">please see our lattest offer package 🙂!</h5>
                     </Card>
                 }
             </div>

@@ -6,7 +6,7 @@ const UpdateOrder = () => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        const url = `https://blooming-fortress-72472.herokuapp.com/orders/${id}`;
+        const url = `http://localhost:5000/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
@@ -25,7 +25,7 @@ const UpdateOrder = () => {
     }
 
     const handleUpdateOrder = e => {
-        const url = `https://blooming-fortress-72472.herokuapp.com/${id}`;
+        const url = `http://localhost:5000/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -29,8 +29,6 @@ const MyOrder = () => {
     }, [])
 
 
-
-
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {

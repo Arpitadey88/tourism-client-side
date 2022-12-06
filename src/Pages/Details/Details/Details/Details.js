@@ -14,7 +14,7 @@ const Details = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://blooming-fortress-72472.herokuapp.com/services/${serviceId}`)
+        fetch(`http://localhost:5000/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setOrders(data));
 
@@ -23,7 +23,7 @@ const Details = () => {
     const onSubmit = data => {
         const orderService = orders
         data.order = orderService;
-        fetch('https://blooming-fortress-72472.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -60,10 +60,7 @@ const Details = () => {
                     <div className="col-md-6 submit-order pt-4">
                         <h2 className="text-center pb-3 font-google" style={{ color: 'orange' }}>Book Package Now</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
-
                             <input defaultValue={user.displayName} {...register("name")} />
-
-
                             <input placeholder="Enter your email" defaultValue={user.email} {...register("email", { required: true })} />
                             <input placeholder="city"  {...register("city")} />
                             <input placeholder="address" {...register("address")} />
