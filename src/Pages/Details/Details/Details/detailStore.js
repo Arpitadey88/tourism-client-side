@@ -29,7 +29,7 @@ const Details = () => {
         const tourImg = imgRef.current.value;
 
         const newBooking = { userName, userEmail, userNumber, userDestination, tourPrice, tourImg };
-        fetch('https://ghastly-beast-92427.herokuapp.com/orders', {
+        fetch('https://tourism-server-side.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const Details = () => {
     }
 
     useEffect(() => {
-        fetch(`https://ghastly-beast-92427.herokuapp.com/services/${serviceId}`)
+        fetch(`https://tourism-server-side.vercel.app/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
 

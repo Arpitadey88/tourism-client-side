@@ -10,7 +10,7 @@ const AddNewService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://ghastly-beast-92427.herokuapp.com/services', data)
+        axios.post('https://tourism-server-side.vercel.app/services', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {

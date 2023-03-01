@@ -6,7 +6,7 @@ const UpdateOrder = () => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://tourism-server-side.vercel.app/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
@@ -25,7 +25,7 @@ const UpdateOrder = () => {
     }
 
     const handleUpdateOrder = e => {
-        const url = `http://localhost:5000/${id}`;
+        const url = `https://tourism-server-side.vercel.app/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

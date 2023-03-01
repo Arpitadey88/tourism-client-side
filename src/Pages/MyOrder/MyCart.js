@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         const key = { email: user.email };
-        fetch('https://blooming-fortress-72472.herokuapp.com/myOrder', {
+        fetch('https://tourism-server-side.vercel.app/myOrder', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -32,7 +32,7 @@ const MyOrder = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`https://blooming-fortress-72472.herokuapp.com/myOrder/${id}`, {
+            fetch(`https://tourism-server-side.vercel.app/myOrder/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

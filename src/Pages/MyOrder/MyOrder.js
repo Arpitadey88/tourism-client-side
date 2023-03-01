@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         const key = { email: user.email };
-        fetch('http://localhost:5000/logInService', {
+        fetch('https://tourism-server-side.vercel.app/logInService', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const MyOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure,you want to delete?')
         if (proceed) {
-            fetch(`http://localhost:5000/logInService/${id}`, {
+            fetch(`https://tourism-server-side.vercel.app/logInService/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ const MyOrder = () => {
     }
 
     return (
-        <div  className='container border' id="myOrders">
+        <div className='container border' id="myOrders">
             <h2 className="text-center py-3">Placed Order :  {services.length}</h2>
             <div className="row row-cols-1 row-cols-md-2">
                 {services.length ?
